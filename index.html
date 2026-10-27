@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173f2d">
+<meta name="description" content="Methane Alleviator: a student project concept for food-waste management, compost fertilizer, solar energy and biogas recovery.">
+<title>Methane Alleviator | Waste Less. Grow More.</title>
+<style>
+:root{--forest:#173f2d;--forest2:#24583c;--lime:#d9f278;--cream:#f7f8f2;--sage:#eaf0e1;--ink:#183d2d;--muted:#647568;--white:#fff;--line:#e0e8db;--shadow:0 16px 42px #183d2d12}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.container{width:min(1120px,88%);margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:900;letter-spacing:1px;line-height:1.2}.logo{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:var(--lime);font-size:23px}.navlinks{display:flex;align-items:center;gap:25px;color:#526b5b;font-size:12px;font-weight:650}.navlinks a:hover{color:#2f7a4d}.navbtn,.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:13px 18px;font-size:12px;font-weight:800;background:var(--forest);color:white;transition:transform .2s,background .2s}.navbtn:hover,.button:hover{transform:translateY(-2px);background:#2d6544}.menu-toggle{display:none;background:transparent;border:1px solid var(--line);border-radius:10px;padding:9px 11px;color:var(--forest)}
+.hero{background:var(--forest);color:white;position:relative;overflow:hidden;border-radius:28px;display:grid;grid-template-columns:1.05fr .95fr;gap:25px;align-items:center;padding:clamp(32px,6vw,70px);min-height:490px}.hero:before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;border:1px solid #ffffff16;right:-140px;top:-180px}.eyebrow{font-size:10px;letter-spacing:2.3px;text-transform:uppercase;font-weight:900;color:#65965c}.hero .eyebrow{color:var(--lime)}h1{font-size:clamp(42px,6.2vw,73px);letter-spacing:-3.8px;line-height:.98;margin:20px 0;font-weight:900;position:relative}h1 span{color:var(--lime)}.hero-copy{font-size:14px;line-height:1.9;color:#d2e0d5;max-width:450px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.button-lime{background:var(--lime);color:var(--forest)}.button-lime:hover{background:#e6ff9b}.button-outline{background:transparent;border:1px solid #668571;color:white}.button-outline:hover{background:#ffffff10}.micro{font-size:10px;color:#b9cdbd;margin-top:22px;letter-spacing:.5px}
+.art{min-height:320px;display:grid;place-items:center;position:relative;background:radial-gradient(ellipse,#39734c 0%,#224f36 49%,#173f2d 73%);border-radius:48% 48% 42% 42%}.machine{position:relative;width:174px;height:214px;border:5px solid #e5e9dc;background:#dbe6d3;border-radius:19px 19px 26px 26px;box-shadow:12px 16px 0 #102f22;z-index:1}.machine-lid{position:absolute;top:-19px;left:20px;width:124px;height:26px;background:#b6d47d;border:4px solid #e5e9dc;border-radius:8px}.machine-window{position:absolute;top:38px;left:18px;width:128px;height:80px;background:#b6d6a6;border:5px solid #a6c79c;border-radius:12px;display:grid;place-items:center;font-size:38px}.machine-label{position:absolute;bottom:17px;left:0;right:0;text-align:center;color:#254b32;font-size:9px;font-weight:900;letter-spacing:1.4px}.float{position:absolute;padding:11px 13px;background:white;color:#1a4932;border-radius:12px;box-shadow:0 10px 24px #102f2230;font-size:10px;font-weight:850;line-height:1.6;z-index:2}.f1{left:0;top:32px}.f2{right:0;bottom:35px}.f3{right:2px;top:25px}.spark{position:absolute;font-size:30px}.s1{left:15%;bottom:14%}.s2{right:13%;bottom:16%;font-size:24px}.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;background:var(--lime);padding:22px 6%;border-radius:0 0 20px 20px}.strip strong{display:block;font-size:12px;margin-bottom:5px}.strip span{font-size:10px;line-height:1.6}
+section.section{padding:76px 0}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.section h2{font-size:clamp(29px,4.2vw,45px);line-height:1.08;letter-spacing:-1.7px;margin:13px 0 16px;font-weight:900}.lead{font-size:13px;line-height:1.9;color:var(--muted);max-width:670px}.note{font-size:11px;line-height:1.8;color:var(--muted);margin-top:17px}.waste-art{background:var(--sage);border-radius:25px;min-height:250px;display:grid;place-items:center;text-align:center;padding:25px}.food{font-size:36px;letter-spacing:5px}.down{font-size:24px;color:#6e9652;margin:12px}.output{display:inline-block;background:white;border-radius:14px;padding:13px 18px;font-size:13px;font-weight:900;box-shadow:var(--shadow)}.feature-section{background:#eff3e8}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}.card{background:white;border:1px solid var(--line);border-radius:19px;padding:23px;min-height:188px;box-shadow:0 7px 22px #213c1b05;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.icon{width:45px;height:45px;border-radius:14px;background:#e8f3d6;display:grid;place-items:center;font-size:23px;margin-bottom:18px}.card h3,.detail h3{font-size:14px;margin:0 0 9px;font-weight:900}.card p,.detail p{font-size:11px;line-height:1.85;color:var(--muted);margin:0}
+.process{background:var(--forest);color:white}.process .lead{color:#cbdacf}.process .eyebrow{color:var(--lime)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}.step{border:1px solid #456951;border-radius:18px;padding:21px 17px;background:#204a34}.step-num{font-size:10px;color:var(--lime);font-weight:900;letter-spacing:1px}.step-icon{font-size:30px;margin:16px 0}.step h3{font-size:13px;margin:0 0 10px}.step p{font-size:11px;line-height:1.8;color:#cbdacf;margin:0}.caution{font-size:10px;line-height:1.8;color:#bcd0c1;margin-top:20px}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}.detail{display:flex;gap:15px;align-items:flex-start;background:white;padding:20px;border:1px solid var(--line);border-radius:16px}.detail-icon{font-size:25px}.sdg-section{background:#eff3e8}.sdgs{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:26px}.sdg{padding:22px;border-radius:17px;background:#e3ebd8}.sdg-number{font-size:29px;font-weight:950;color:#5a823d}.sdg b{font-size:12px;display:block;margin:9px 0 7px}.sdg p{font-size:11px;line-height:1.8;color:#5f7162;margin:0}
+.faqs{max-width:800px;margin-top:25px}.faq{border-bottom:1px solid var(--line)}.faq button{display:flex;width:100%;align-items:center;justify-content:space-between;gap:12px;text-align:left;border:0;background:transparent;padding:18px 0;color:var(--ink);font-size:13px;font-weight:850}.faq button span:last-child{font-size:20px;color:#5c8b4e}.faq-answer{display:none;color:var(--muted);font-size:12px;line-height:1.8;padding:0 25px 18px 0}.faq.open .faq-answer{display:block}.closing{background:var(--lime);border-radius:25px;padding:38px 7%;display:flex;align-items:center;justify-content:space-between;gap:22px}.closing h2{max-width:520px;margin-bottom:0}.closing .button{white-space:nowrap}
+footer{background:#112f22;color:white;padding:28px 0;font-size:10px;line-height:1.8}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:15px}.footer-muted{color:#b9cdbd;margin-top:10px}.top{position:fixed;right:18px;bottom:18px;border:0;border-radius:50%;width:43px;height:43px;background:var(--lime);color:var(--forest);font-size:18px;box-shadow:var(--shadow);display:none;z-index:5}.top.show{display:block}.small{font-size:10px;color:var(--muted)}
+@media(max-width:760px){.container{width:90%}.nav{height:70px}.navlinks{display:none;position:absolute;top:65px;left:5%;right:5%;background:white;border:1px solid var(--line);border-radius:15px;padding:16px;box-shadow:var(--shadow);z-index:10;flex-direction:column;align-items:flex-start;gap:16px}.navlinks.open{display:flex}.menu-toggle{display:block}.navbtn{display:none}.hero{grid-template-columns:1fr;padding:36px 7% 30px;min-height:auto}.art{min-height:280px;margin-top:10px}.strip{grid-template-columns:1fr;gap:13px;padding:20px 7%}.intro-grid{grid-template-columns:1fr;gap:24px}section.section{padding:55px 0}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.detail-grid{grid-template-columns:1fr}.sdgs{grid-template-columns:1fr}.closing{align-items:flex-start;flex-direction:column;padding:30px 7%}.footer-row{align-items:flex-start;flex-direction:column}}
+@media(max-width:450px){h1{letter-spacing:-2.5px}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.card{min-height:auto}.f1{left:-3px}.f2{right:-4px}.f3{right:-2px}.food{font-size:29px;letter-spacing:2px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="container nav">
+  <a class="brand" href="#home" aria-label="Methane Alleviator home"><span class="logo">🌱</span><span>METHANE<br>ALLEVIATOR</span></a>
+  <nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="#mission">Our Mission</a><a href="#features">Features</a><a href="#process">How It Works</a><a href="#impact">SDG Impact</a><a href="#faq">FAQ</a></nav>
+  <a class="navbtn" href="#features">Explore the Product ↗</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button>
+</header>
+<main class="container">
+<section class="hero" id="home">
+  <div>
+    <div class="eyebrow">A sustainable waste-management concept</div>
+    <h1>From food<br>waste to a<br><span>greener future.</span></h1>
+    <p class="hero-copy">Introducing Methane Alleviator — a food-waste composter concept designed to turn domestic food scraps into useful fertilizer and recover biogas for potential alternative fuel use.</p>
+    <div class="actions"><a class="button button-lime" href="#process">Discover How It Works ↘</a><a class="button button-outline" href="#features">Explore Features</a></div>
+    <div class="micro">REDUCE WASTE · RECOVER RESOURCES · RETHINK ENERGY</div>
+  </div>
+  <div class="art" aria-label="Illustration of a composting machine">
+    <span class="spark s1">🌿</span><span class="spark s2">✦</span>
+    <div class="machine"><div class="machine-lid"></div><div class="machine-window">🌱</div><div class="machine-label">COMPOST SYSTEM</div></div>
+    <div class="float f1">♻️<br>FOOD WASTE<br>PROCESSING</div><div class="float f2">🌱<br>FERTILIZER<br>COLLECTION</div><div class="float f3">☀️ SOLAR<br>ENERGY</div>
+  </div>
+</section>
+<div class="strip">
+  <div><strong>01 / TWO-LAYER SYSTEM</strong><span>Staged decomposition and fertilizer collection.</span></div>
+  <div><strong>02 / SMART MONITORING</strong><span>Temperature, moisture, pH and water-level monitoring.</span></div>
+  <div><strong>03 / RESOURCE RECOVERY</strong><span>Designed for fertilizer production and biogas storage.</span></div>
+</div>
+<section class="section" id="mission">
+  <div class="intro-grid">
+    <div><div class="eyebrow">The problem we want to address</div><h2>Food waste shouldn't be the end of the story.</h2><p class="lead">Food waste decomposing in landfills without proper management can release methane into the atmosphere. Methane Alleviator explores another approach: managing domestic food waste and making use of the products of decomposition.</p><p class="note">Our mission is to help alleviate the environmental effects of methane released from landfills, produce biogas that could serve as an alternative cooking fuel, and create organic fertilizer that could substitute conventional chemical fertilizer.</p></div>
+    <div class="waste-art"><div><div class="food">🍌 🥬 🥕 🍎</div><div class="down">↓</div><div class="output">🌱 A NEW PURPOSE</div><p class="note">Food scraps can become a resource through composting and biogas recovery.</p></div></div>
+  </div>
+</section>
+<section class="section feature-section" id="features">
+  <div class="container"><div class="eyebrow">Designed with purpose</div><h2>Meet the key features.</h2><p class="lead">Each feature has a specific role in food-waste processing, monitoring, resource recovery or garden care.</p>
+  <div class="cards">
+    <article class="card"><div class="icon">⚙️</div><h3>Food Waste Shredder</h3><p>Cuts and grinds domestic food waste into smaller particles, increasing the surface area for decomposition by aerobic bacteria.</p></article>
+    <article class="card"><div class="icon">🪴</div><h3>Two-Layer Fertilizer Collection</h3><p>Waste decomposes in the top container for two weeks, then moves to the bottom container for further decomposition. The process takes up to one month.</p></article>
+    <article class="card"><div class="icon">☀️</div><h3>Solar Panel</h3><p>Designed to convert solar energy into electricity. The report specifies an installation angle of approximately 18°–36° to absorb solar radiation.</p></article>
+    <article class="card"><div class="icon">🌡️</div><h3>Smart Monitoring Sensors</h3><p>Temperature, moisture and pH sensors monitor conditions in the fertilizer compartment and provide alerts when readings are outside the set range.</p></article>
+    <article class="card"><div class="icon">💧</div><h3>Rainwater Irrigation</h3><p>An ultrasonic sensor monitors the rainwater tank level. The system is designed to use stored rainwater when available and switch to household water when it is low.</p></article>
+    <article class="card"><div class="icon">🌬️</div><h3>Odour Control</h3><p>A detachable, replaceable mesh bag containing sodium bicarbonate granules is installed under the cover to help absorb unpleasant odours.</p></article>
+  </div></div>
+</section>
+<section class="section process" id="process">
+  <div class="container"><div class="eyebrow">The process</div><h2>How Methane Alleviator works.</h2><p class="lead">A staged process designed to manage food scraps, collect fertilizer and route biogas through a filtration and storage system.</p>
+  <div class="steps">
+    <article class="step"><div class="step-num">STEP 01</div><div class="step-icon">🥕</div><h3>Shred the Waste</h3><p>Domestic food waste enters through the funnel and is cut into smaller particles.</p></article>
+    <article class="step"><div class="step-num">STEP 02</div><div class="step-icon">🧫</div><h3>Decompose in Stages</h3><p>Waste stays in the top container for two weeks before moving to the bottom layer for further decomposition.</p></article>
+    <article class="step"><div class="step-num">STEP 03</div><div class="step-icon">🧪</div><h3>Filter the Biogas</h3><p>The designed filter uses steel wool, activated carbon and water to remove selected unwanted components from the gas.</p></article>
+    <article class="step"><div class="step-num">STEP 04</div><div class="step-icon">🌱</div><h3>Collect Useful Outputs</h3><p>After up to one month, fertilizer can be collected. The gas-storage design uses an inner tank floating inside an outer water-filled tank.</p></article>
+  </div>
+  <p class="caution">This describes the intended design in the report. Actual compost quality, gas purity, gas safety and performance require appropriate testing and validation.</p></div>
+</section>
+<section class="section" id="details">
+  <div class="eyebrow">More than a composter</div><h2>Thoughtful details for a better system.</h2>
+  <div class="detail-grid">
+    <article class="detail"><div class="detail-icon">❄️</div><div><h3>Liquid Cooling Mechanism</h3><p>The cooling system is designed to help control overheating and direct methane-containing gas toward the filter and storage tank.</p></div></article>
+    <article class="detail"><div class="detail-icon">🧹</div><div><h3>Excess Water Removal</h3><p>A water-removal hole helps drain excess liquid during shredding to prevent excessive moisture in the fertilizer collection compartment.</p></div></article>
+    <article class="detail"><div class="detail-icon">🧲</div><div><h3>Biogas Filtration System</h3><p>The report describes steel wool for hydrogen sulphide removal, activated carbon for water droplets, and water to dissolve some carbon dioxide.</p></div></article>
+    <article class="detail"><div class="detail-icon">🛢️</div><div><h3>Floating Gas Storage Tank</h3><p>The inner tank rises as gas enters and lowers as gas is used, with the design intended to compensate for changes in stored gas volume.</p></div></article>
+    <article class="detail"><div class="detail-icon">🚨</div><div><h3>Alerts and Monitoring</h3><p>The control centre is designed to alert users when the last fertilizer container is ejected and when monitored conditions need attention.</p></div></article>
+    <article class="detail"><div class="detail-icon">🚿</div><div><h3>Water Circulation</h3><p>The irrigation tank circulates water to help prevent stagnation and reduce the risk of mosquito breeding.</p></div></article>
+  </div>
+</section>
+<section class="section sdg-section" id="impact">
+  <div class="eyebrow">Our sustainability goals</div><h2>Innovation with a wider purpose.</h2><p class="lead">The project connects its design goals to three United Nations Sustainable Development Goals highlighted in the report.</p>
+  <div class="sdgs">
+    <article class="sdg"><div class="sdg-number">07</div><b>Affordable and Clean Energy</b><p>Explores biogas recovery as a potential renewable energy source and uses a solar panel to reduce reliance on conventional electricity.</p></article>
+    <article class="sdg"><div class="sdg-number">12</div><b>Responsible Consumption and Production</b><p>Converts domestic food waste into potentially useful fertilizer and aims to reduce organic waste sent to landfills.</p></article>
+    <article class="sdg"><div class="sdg-number">13</div><b>Climate Action</b><p>Promotes food-waste management and renewable energy use, which may help reduce greenhouse gas emissions when properly designed and operated.</p></article>
+  </div>
+</section>
+<section class="section" id="faq">
+  <div class="eyebrow">Quick answers</div><h2>Frequently asked questions.</h2>
+  <div class="faqs">
+    <div class="faq"><button aria-expanded="false"><span>What does Methane Alleviator do?</span><span>+</span></button><div class="faq-answer">It is a food-waste composter project concept designed to process domestic food waste, collect fertilizer and recover biogas for potential alternative fuel use.</div></div>
+    <div class="faq"><button aria-expanded="false"><span>How long does the fertilizer process take?</span><span>+</span></button><div class="faq-answer">According to the report, waste remains in the top container for two weeks and then moves to the bottom layer for further decomposition. The overall process takes up to one month.</div></div>
+    <div class="faq"><button aria-expanded="false"><span>What do the sensors monitor?</span><span>+</span></button><div class="faq-answer">The design includes temperature, moisture and pH monitoring in the fertilizer compartment, as well as an ultrasonic sensor to monitor the rainwater tank level.</div></div>
+    <div class="faq"><button aria-expanded="false"><span>Is the biogas ready to use as cooking fuel?</span><span>+</span></button><div class="faq-answer">Biogas recovery is an objective of the project, not a verified performance claim. Gas composition, filtration performance and safe operation would need professional testing before any fuel use.</div></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="closing"><div><div class="eyebrow" style="color:#466b35">A greener idea starts at home</div><h2>Don't just throw it away. Rethink its potential.</h2></div><a class="button" href="#home">Back to the Top ↑</a></div>
+</section>
+</main>
+<footer><div class="container"><div class="footer-row"><div class="brand"><span class="logo">🌱</span><span>METHANE ALLEVIATOR</span></div><span>Waste less · Grow more</span></div><div class="footer-muted">A student innovation project focused on domestic food-waste management, fertilizer production and potential biogas recovery.</div><div class="footer-muted">Product functions and benefits are based on the project report. The prototype's real-world performance and gas safety must be verified through testing.</div></div></footer>
+<button class="top" id="topButton" aria-label="Back to top">↑</button>
+<script>
+const toggle=document.getElementById('menuToggle');
+const nav=document.getElementById('navlinks');
+toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕ Close':'☰ Menu';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰ Menu';}));
+document.querySelectorAll('.faq button').forEach(button=>button.addEventListener('click',()=>{const faq=button.parentElement;const open=faq.classList.toggle('open');button.setAttribute('aria-expanded',String(open));button.lastElementChild.textContent=open?'−':'+';}));
+const topButton=document.getElementById('topButton');
+window.addEventListener('scroll',()=>topButton.classList.toggle('show',window.scrollY>450));
+topButton.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
